@@ -23,4 +23,6 @@ if __name__ == '__main__':
     print(card1 == card2)
     print(card2 == card3)
     print(card1 == card3)
-    
+    print(card1)
+    print(card3)
+
