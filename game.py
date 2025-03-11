@@ -37,6 +37,7 @@ class Game:
                     #convert it back to a list so we can use random() on it 
                     random_location = random.choice(list(available_locations))
                     print(random_location)
+                    print(32)
 
     
 
