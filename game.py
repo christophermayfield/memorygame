@@ -28,18 +28,31 @@ class Game:
         for column in self.columns:
             for num in range(1,self.size+1):
                 self.locations.append(f'{column} {num}')
-        def set_cards(self):
+    def set_cards(self):
             used_locations = []
-            for word in card_options:
+            for word in self.card_options:
                 for i in range(2):
                     #sets remove duplicates 
-                    available_locations = set((self.locations) - self(used_locations))
+                    available_locations = set(self.locations) - set(used_locations)
                     #convert it back to a list so we can use random() on it 
                     random_location = random.choice(list(available_locations))
                     used_locations.append(random_location)
+                    card = Card(word, random_location)
+                    self.cards.append(card)
 
-    
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
-    Game()
+    game = Game()
+    for card in game.cards:
+         print(card)
+
+
