@@ -36,8 +36,7 @@ class Game:
                     available_locations = set((self.locations) - self(used_locations))
                     #convert it back to a list so we can use random() on it 
                     random_location = random.choice(list(available_locations))
-                    print(random_location)
-                    print(32)
+                    used_locations.append(random_location)
 
     
 
