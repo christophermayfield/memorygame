@@ -18,4 +18,10 @@ class Game:
     def __init__(self):
         self.size = 4
         self.card_options = ['Add', 'Boo', 'Cat', 'Dev', 'Egg', 'Far', 'Gum', 'Hut']
+        self.columns = ['A', 'B', 'C','D']
+        self.cards = []
+    
+
+    
+
         
