@@ -13,6 +13,8 @@
 #create instance
 #call the start game method 
 
+myVar = 12 
+print(myVar)
 
 from cards import Card
 import random
