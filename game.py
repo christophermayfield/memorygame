@@ -28,8 +28,8 @@ class Game:
         self.locations = []
 
         for column in self.columns:
-            for num in range(1,self.size+1):
-                self.locations.append(f'{column} {num}')
+            for num in range(1,self.size +1):
+                self.locations.append(f'{column} {num}') #f-string
     def set_cards(self):
             used_locations = []
             for word in self.card_options:
