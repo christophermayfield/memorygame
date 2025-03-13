@@ -69,7 +69,28 @@ class Game:
               print(print_row)
 
 
+    def check_match(self, loc1,loc2):
+         cards = []
+         for card in self.cards:
+              if card.location == loc1 or card.location == loc2:
+                   cards.append(card)
+              if cards[0] == cards[1]:
+                   cards[0].matched = True
+                   cards[1].matched = True 
+                   return True
+              else: 
+                   for card in cards:
+                        print(f'{card.location}: {card}')  
+                   return False
+    def check_win(self):
+         for card in self.cards:
+              if card.matched == False:
+                   return False
+              
+              
 
+
+         
 
 
 
