@@ -79,10 +79,18 @@ if __name__ == '__main__':
     game = Game()
     game.set_cards()
     game.create_grid()
+    game.cards[0].matched = True
+    game.cards[1].matched = True
+    game.cards[2].matched = True
+    game.cards[3].matched = True
+    print(game.create_row(1))
+    print(game.create_row(2))
+    print(game.create_row(3))
+    print(game.create_row(4))
 
 
 
-
+   
 
 
 
