@@ -32,7 +32,9 @@ class Game:
             used_locations = []
             for word in self.card_options:
                 for i in range(2):
+                    #grabbing 2 locations
                     #sets remove duplicates 
+                    #run the following code for a context example set1 = {'a','b'} set 2 = {'a'} set1-set2
                     available_locations = set(self.locations) - set(used_locations)
                     #convert it back to a list so we can use random() on it 
                     random_location = random.choice(list(available_locations))
@@ -52,7 +54,10 @@ class Game:
 
 if __name__ == '__main__':
     game = Game()
+    game.set_cards()
     for card in game.cards:
          print(card)
+   
+
 
 
