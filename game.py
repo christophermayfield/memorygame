@@ -76,6 +76,7 @@ class Game:
               if card.location == loc1 or card.location == loc2:
                    cards.append(card)
               if cards[0] == cards[1]:
+                   #changing the matched parameter to true if they're a match
                    cards[0].matched = True
                    cards[1].matched = True 
                    return True
