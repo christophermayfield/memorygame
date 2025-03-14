@@ -3,7 +3,12 @@
 #matched or not?
 #location 
 #__eq__
-
+class Person:
+    def __init__(self,name,age,height):
+        self.name = name
+        self.age = age
+        self.height = height 
+        
 class Card:
     def __init__(self,word,location):
         self.card = word
