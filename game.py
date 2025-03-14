@@ -70,6 +70,7 @@ class Game:
 
 
     def check_match(self, loc1,loc2):
+         #empty array to hold the matches
          cards = []
          for card in self.cards:
               if card.location == loc1 or card.location == loc2:
@@ -86,7 +87,11 @@ class Game:
          for card in self.cards:
               if card.matched == False:
                    return False
+         return True
+    def check_location(self, time):
+         while True:
               
+                  
               
 
 
