@@ -40,13 +40,32 @@ class Game:
 
     def create_row(self, num):
         row = [] #append cards if they've been guessed or empty spaces
+        for column in self.columns:
+            for card in self.cards:
+                if card.location == f'{column}{num}':
+                    if card.matched:
+                        row.append(str(card))
+                    else:
+                        row.append('   ')
+        return row
 
+    def create_grid(self):
+        # /  A  /  B  /  C  /  D  /
+        
+         
      
         
 
 if __name__== "__main__":
     mygame = Game()
     mygame.set_cards()
-    for card in mygame.cards:
-        print(card)
+    mygame.cards[0].matched = True
+    mygame.cards[1].matched = True
+    mygame.cards[2].matched = True
+    mygame.cards[3].matched = True
+    print(mygame.create_row(1))
+    print(mygame.create_row(2))
+    print(mygame.create_row(3))
+    print(mygame.create_row(4))
+
     
