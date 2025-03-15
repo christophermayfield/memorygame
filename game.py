@@ -44,6 +44,7 @@ class Game:
                     self.cards.append(card)
 
 
+
     def create_row(self,num):
          row = []
          for column in self.columns:
@@ -53,19 +54,19 @@ class Game:
                              row.append(str(card))
                         else:
                              row.append('   ')
-         return row  
+              return row 
 
 
          
     def create_grid(self):
          #template
          # | A | B | C | D |
-         header = '  |  ' + '   |  '.join(self.columns) + '   | '
+         header = ' |  ' + '  |  '.join(self.columns) + '  |'
          print(header)
          for row in range(1, self.size + 1):
               print_row = f'{row}| '
               get_row = self.create_row(row)
-              print_row+= '  | '.join(get_row) + '  |'
+              print_row += ' | '.join(get_row) + ' |'
               print(print_row)
 
 
@@ -126,7 +127,7 @@ class Game:
 
 if __name__ == '__main__':
     game = Game()
-    game.start_game()
+    game.create_grid()
 
 
 
