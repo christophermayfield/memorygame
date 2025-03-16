@@ -16,6 +16,7 @@
 
 from cards import Card
 import random
+import zipapp
 #memory game
 class Game:
     def __init__(self):
