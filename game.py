@@ -88,7 +88,15 @@ class Game:
                 return guess.upper()
             else:
                 print('That\'s not a valid location. It should look like this: A1')
-                
+    def start_game(self):
+        game_running = True
+        print('Memory Game')
+        self.set_cards()
+        while game_running:
+            self.create_grid()
+            guess1 = self.check_location('first')
+            guess2 = self.check_location('second')
+                      
          
          
         
