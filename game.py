@@ -75,7 +75,23 @@ class Game:
             for card in cards:
                 print(f'{card.location}: {card}')
                 return False      
-
+    def check_win(self):
+     for card in self.cards:
+         if card.matched == False:
+             return False 
+         else: 
+             return True 
+    def check_location(self,time):
+        while True:
+            guess = input(f'What\'s the location of your {time} card?')
+            if guess.upper() in self.locations:
+                return guess.upper()
+            else:
+                print('That\'s not a valid location. It should look like this: A1')
+                
+         
+         
+        
           
          
      
